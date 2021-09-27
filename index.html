@@ -1,0 +1,23 @@
+<html>
+<head> <title> My page </title>  </head>
+<body>
+<h1>My Bakery</h1>
+<img src="cake.gif" height=500 width=500/>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "c0425d5a-c97d-4776-8a91-526c3241b3b4", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "875e003e-796f-40b2-9f63-76e8e8562178", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+      (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+      "/WatsonAssistantChatEntry.js"
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+
+</html>
